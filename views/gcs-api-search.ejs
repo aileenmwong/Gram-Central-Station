@@ -1,0 +1,17 @@
+<% include ./partials/boilerplate %>
+<% include ./partials/header %>
+<h1 id="searchHead">Search For Grams!</h1>
+  <form method='#' action='#'>
+    <select name="type" type="text">
+      <option value="1">treat</option>
+      <option value="2">meal</option>
+      <option value="3">location</option>
+      <option value="4">activity</option>
+    </select>
+    <input name="location" type="text" placeholder="location" />
+      <div id="buttonDiv">
+        <input class="saveButton" type="submit" value="search" />
+      </div>
+    </form>
+  </main>
+<% include ./partials/end %>

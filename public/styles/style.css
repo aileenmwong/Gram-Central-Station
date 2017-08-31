@@ -3,7 +3,7 @@ font-family: 'Lobster', cursive;
 font-family: 'Fjalla One', sans-serif;
 */
 button {
-  position: relative;
+/*  position: relative;*/
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   padding: 10px;
@@ -74,17 +74,19 @@ button {
   margin: 20px;
 }
 #gramObjectSmall {
-  border: 1px solid black;
+  border: 1px solid gray;
   width: 200px;
   display: flex;
   position: relative;
   flex-direction: column;
+  margin: 10px 0;
 }
 .feedWrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #gramWrapperSmall {
@@ -113,6 +115,8 @@ button {
   background-color: lightblue;
   font-family: 'Quicksand', sans-serif;
   padding: 2px;
+  height: 25px;
+  width: 25px;
 
 }
 .descriptionSmall {
@@ -121,6 +125,7 @@ button {
   font-family: 'Quicksand', sans-serif;
   padding: 5px;
   position: relative;
+  margin: auto;
 }
 #photoSmall {
   height: 200px;
@@ -139,10 +144,25 @@ button {
   font-family: 'Quicksand', sans-serif;
 /*  border: 1px solid black;*/
 }
+#buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+  justify-content: center;
+}
+
 #view {
   border: 1px solid black;
   position: relative;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+#edit {
+  border: 1px solid black;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /*add item page*/

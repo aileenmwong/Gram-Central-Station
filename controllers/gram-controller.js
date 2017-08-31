@@ -64,7 +64,8 @@ gramController.update = (req, res) => {
     comments: req.body.comments,
     type: req.body.type,
   }, req.params.id).then(gram => {
-    res.redirect('/grams/${req.params.id}');
+    res.redirect('/grams');
+    // `/grams/${req.params.id}`
     })
   .catch(err => {
     console.log(err);
@@ -75,10 +76,9 @@ gramController.update = (req, res) => {
 gramController.delete = (req, res) => {
   Gram.delete(req.params.id)
   .then(() => {
-    res.json({
-      message: 'Gram deleted successfully!',
-    });
-  }).catch(err => {
+    res.redirect('/grams');
+    })
+  .catch(err => {
     console.log(err);
     res.status(500).json(err);
   });

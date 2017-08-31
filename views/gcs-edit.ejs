@@ -2,15 +2,14 @@
 <% include ./partials/boilerplate %>
 <% include ./partials/header %>
   <main>
-  <form method='POST' action='/grams/<% data.id %>?_method=PUT'>
+  <form method='POST' action='/grams/<%= data.id %>?_method=PUT'>
     <div class="largeWrapper">
       <div id="gramObjectLarge">
         <div id="gramWrapperLarge">
           <div id="photoHeadLargeWrapper">
-              <div id="photoHeadLarge">
-
-              </div>
+              <div id="photoHeadLarge"></div>
             </div>
+            <input name="id" type="hidden" value="<%= data.id %>">
             <div class="descriptionSmall" id="photoLarge">
               <input name="photo" type="text" placeholder="<%= data.photo %>" />
             </div>
@@ -21,11 +20,11 @@
               <input name="status" type="text" placeholder="<%= data.status %>" >
             </div>
             <div class="descriptionSmall" id="typeLarge">
-              <select>
-                <option value="treat">treat</option>
-                <option value="meal">meal</option>
-                <option value="location">location</option>
-                <option value="activity">activity</option>
+              <select name="type" type="text">
+                <option value="1">treat</option>
+                <option value="2">meal</option>
+                <option value="3">location</option>
+                <option value="4">activity</option>
               </select>
           </div>
         </div>
@@ -37,3 +36,5 @@
     </form>
   </main>
 <% include ./partials/end %>
+
+

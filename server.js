@@ -16,6 +16,14 @@ app.get('/', function(req, res){
   res.render('gcs-index')
 });
 
+app.get('/search', function(req, res){
+  res.render('gcs-api-search')
+});
+
+app.get('/gramfeed', function(req, res){
+  res.render('gcs-api-feed')
+});
+
 const gramRoutes = require('./routes/gram-routes');
 app.use('/grams', gramRoutes);
 

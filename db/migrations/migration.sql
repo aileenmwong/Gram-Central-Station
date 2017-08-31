@@ -14,3 +14,6 @@ CREATE TABLE IF NOT EXISTS phototypes (
   imgtype VARCHAR(255)
 );
 
+CREATE INDEX ON grams (location);
+CREATE INDEX ON phototypes (imgtype);
+

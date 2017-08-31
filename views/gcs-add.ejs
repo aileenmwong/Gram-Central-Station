@@ -1,7 +1,7 @@
 <% include ./partials/boilerplate %>
 <% include ./partials/header %>
   <main>
-  <form method='POST' action='/tasks'>
+  <form method='POST' action='/grams'>
     <div class="largeWrapper">
       <div id="gramObjectLarge">
         <div id="gramWrapperLarge">
@@ -20,11 +20,11 @@
               <input name="status" type="text" placeholder="status" >
             </div>
             <div class="descriptionSmall" id="typeLarge">
-              <select>
-                <option value="treat">treat</option>
-                <option value="meal">meal</option>
-                <option value="location">location</option>
-                <option value="activity">activity</option>
+              <select name="type" type="text">
+                <option value="1">treat</option>
+                <option value="2">meal</option>
+                <option value="3">location</option>
+                <option value="4">activity</option>
               </select>
           </div>
         </div>

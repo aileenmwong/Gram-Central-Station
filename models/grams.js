@@ -11,6 +11,7 @@ Gram.findAll = () => {
 };
 
 Gram.findById = (id) => {
+  console.log('helllo',id);
   return db.oneOrNone(`
     SELECT grams.id, photo, location, status, comments, type
     FROM grams INNER JOIN phototypes
@@ -20,6 +21,8 @@ Gram.findById = (id) => {
 };
 
 Gram.create = grams => {
+  grams.type = Number.parseInt(grams.type, 10)
+  console.log(grams.type);
   return db.one(
     `
     INSERT INTO grams
@@ -32,6 +35,8 @@ Gram.create = grams => {
 };
 
 Gram.update = (grams, id) => {
+  grams.type = Number.parseInt(grams.type, 10)
+  console.log(grams, id);
   return db.one(
     `
     UPDATE grams SET
