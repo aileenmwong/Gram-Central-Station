@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gram Central Station</title>
+  <link rel="stylesheet" type="text/css" href="../public/styles/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Quicksand" rel="stylesheet">
+</head>
+<body>
+  <header>
+<!--     <div id="gcsLogo"></div> -->
+    <div id="navBarWrapper">
+      <ul id="navBar">
+        <li class="navLinks" id="home" href="#">home</li>
+        <li class="navLinks" id="gcsFeed" href="#">gcs feed</li>
+        <li class="navLinks" id="myFeed" href="#">my feed</li>
+        <li class="navLinks" id="search" href="#">search</li>
+      </ul>
+    </div>
+  </header>
+  <main>
+  <form method='POST' action='/tasks'>
+    <div class="largeWrapper">
+      <div id="gramObjectLarge">
+        <div id="gramWrapperLarge">
+          <div id="photoHeadLargeWrapper">
+              <div id="photoHeadLarge">
+
+              </div>
+            </div>
+            <div class="descriptionSmall" id="photoLarge">
+              <input name="photo" type="text" placeholder="URL here. Please make sure URL has a photo tag, such as .jpg, .png. or .gif" />
+            </div>
+            <div class="descriptionSmall" id="locationLarge">
+              <input name="location" type="text" placeholder="location" />
+            </div>
+            <div class="descriptionSmall" id="statusLarge">
+              <input name="status" type="text" placeholder="status" >
+            </div>
+            <div class="descriptionSmall" id="typeLarge">
+              <select>
+                <option value="treat">treat</option>
+                <option value="meal">meal</option>
+                <option value="location">location</option>
+                <option value="activity">activity</option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <div id="buttonDiv">
+          <input class="saveButton" type="submit" value="save" />
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
+
+
+
+
