@@ -1,0 +1,31 @@
+<% include ./partials/boilerplate %>
+<% include ./partials/header %>
+
+  <main>
+    <div class="largeWrapper">
+      <div id="gramObjectLarge">
+        <div id="gramWrapperLarge">
+          <div id="photoHeadLargeWrapper">
+              <div id="photoHeadLarge">
+
+              </div>
+            </div>
+            <div class="descriptionSmall" id="photoLarge">
+              <%=grams.photo%>
+            </div>
+            <div class="descriptionSmall" id="locationLarge">
+              <%=grams.location%>
+            </div>
+            <div class="descriptionSmall" id="statusLarge">
+              <%=grams.status%>
+            </div>
+            <div class="descriptionSmall" id="typeLarge">
+              <%=grams.type%>
+          </div>
+        </div>
+      </div>
+      <a href="/grams/<%= grams.id %>/edit"><button id="edit">EDIT</button></a>
+    </div>
+  </main>
+
+<% include ./partials/end %>

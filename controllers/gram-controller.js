@@ -5,10 +5,9 @@ const gramController = {};
 gramController.index = (req, res) => {
   Gram.findAll()
   .then(grams => {
-    res.json({
-      message: 'ok',
+    res.render('./gcs-myfeed', {
       data: grams,
-    });
+    })
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -17,10 +16,9 @@ gramController.index = (req, res) => {
 
 gramController.show = (req, res) => {
   Gram.findById(req.params.id)
-  .then(gram => {
-    res.json({
-      message: 'ok',
-      data: gram,
+  .then(data => {
+    res.render('./gcs-single', {
+      grams: data,
     });
   }).catch(err => {
     console.log(err);
@@ -36,12 +34,24 @@ gramController.create = (req, res) => {
     comments: req.body.comments,
     type: req.body.type,
   })
-  .then(gram => {
-    res.json({
-      message: 'Gram added successfully!',
-      data: gram,
+  .then (grams => {
+    res.redirect('/grams');
+    })
+  .catch (err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+};
+
+
+gramController.edit = (req, res) => {
+  Gram.findById(req.params.id)
+  .then(grams => {
+    res.render('./gcs-edit', {
+      data: grams,
     });
   }).catch(err => {
+    console.log(err);
     res.status(500).json(err);
   });
 };
@@ -54,11 +64,9 @@ gramController.update = (req, res) => {
     comments: req.body.comments,
     type: req.body.type,
   }, req.params.id).then(gram => {
-    res.json({
-      message: 'Gram updated successfully!',
-      data: gram,
-    });
-  }).catch(err => {
+    res.redirect('/grams/${req.params.id}');
+    })
+  .catch(err => {
     console.log(err);
     res.status(500).json(err);
   });

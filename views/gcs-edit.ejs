@@ -1,0 +1,39 @@
+
+<% include ./partials/boilerplate %>
+<% include ./partials/header %>
+  <main>
+  <form method='POST' action='/grams/<% data.id %>?_method=PUT'>
+    <div class="largeWrapper">
+      <div id="gramObjectLarge">
+        <div id="gramWrapperLarge">
+          <div id="photoHeadLargeWrapper">
+              <div id="photoHeadLarge">
+
+              </div>
+            </div>
+            <div class="descriptionSmall" id="photoLarge">
+              <input name="photo" type="text" placeholder="<%= data.photo %>" />
+            </div>
+            <div class="descriptionSmall" id="locationLarge">
+              <input name="location" type="text" placeholder="<%= data.location %>" />
+            </div>
+            <div class="descriptionSmall" id="statusLarge">
+              <input name="status" type="text" placeholder="<%= data.status %>" >
+            </div>
+            <div class="descriptionSmall" id="typeLarge">
+              <select>
+                <option value="treat">treat</option>
+                <option value="meal">meal</option>
+                <option value="location">location</option>
+                <option value="activity">activity</option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <div id="buttonDiv">
+          <input class="saveButton" type="submit" value="save" />
+      </div>
+    </div>
+    </form>
+  </main>
+<% include ./partials/end %>

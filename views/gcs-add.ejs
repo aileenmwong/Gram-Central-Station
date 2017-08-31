@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gram Central Station</title>
-  <link rel="stylesheet" type="text/css" href="../public/styles/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Quicksand" rel="stylesheet">
-</head>
-<body>
-  <header>
-<!--     <div id="gcsLogo"></div> -->
-    <div id="navBarWrapper">
-      <ul id="navBar">
-        <li class="navLinks" id="home" href="#">home</li>
-        <li class="navLinks" id="gcsFeed" href="#">gcs feed</li>
-        <li class="navLinks" id="myFeed" href="#">my feed</li>
-        <li class="navLinks" id="search" href="#">search</li>
-      </ul>
-    </div>
-  </header>
+<% include ./partials/boilerplate %>
+<% include ./partials/header %>
   <main>
   <form method='POST' action='/tasks'>
     <div class="largeWrapper">
@@ -52,8 +34,7 @@
       </div>
     </div>
   </main>
-</body>
-</html>
+<% include ./partials/end %>
 
 
 
