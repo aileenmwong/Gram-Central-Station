@@ -1,31 +1,7 @@
 <% include ./partials/boilerplate %>
 <% include ./partials/header %>
 
-  <main>
-    <div class="feedWrapper">
-       <% for (let grams of data) { %>
-      <div id="gramObjectSmall">
-        <div id="gramWrapperSmall">
-          <div id="photoHeadSmallWrapper">
-            <div id="photoHeadSmall"></div>
-            <form action="/grams/<%= grams.id %>?_method=Delete " method="Post">
-              <div><button id="deleteX">X</button></div>
-            </form>
-          </div>
-          <div class="descriptionSmall" id="photoSmall"><img src="<%= grams.photo %>"></div>
-          <div class="descriptionSmall" id="locationSmall"><%= grams.location %></div>
-          <div class="descriptionSmall" id="statusSmall"><%= grams.status %></div>
-          <div class="descriptionSmall" id="typeSmall"><% grams.type %></div>
-        </div>
-      <div class="buttonWrapper">
-        <a href="/grams/<%= grams.id %>"><button id="view">VIEW</button></a>
-        <a href="/grams/<%= grams.id %>/edit"><button id="edit">EDIT</button></a>
-      </div>
-      </div>
 
-    <%}%>
-    </div>
 
-  </main>
 
 <% include ./partials/end %>
