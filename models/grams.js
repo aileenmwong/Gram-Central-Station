@@ -19,36 +19,37 @@ Gram.findById = (id) => {
     `, [id]);
 };
 
-Gram.create = (grams) => {
-  grams.id = Number.parseInt(grams.id, 10);
-  return db.one(`
+Gram.create = grams => {
+  return db.one(
+    `
     INSERT INTO grams
-    (grams.photo, grams.location, grams.status, grams.comments, grams.type)
+    (photo, location, status, comments, type)
     VALUES ($1, $2, $3, $4, $5)
     RETURNING *
-    `, grams
+    `,
     [grams.photo, grams.location, grams.status, grams.comments, grams.type]
     );
 };
 
 Gram.update = (grams, id) => {
-  return db.one(`
+  return db.one(
+    `
     UPDATE grams SET
     photo = $1,
     location = $2,
     status = $3,
     comments = $4,
     type = $5
-    WHERE grams.id = $6
+    WHERE id = $6
     RETURNING *
-    `, [grams.photo, grams.location, grams.status, grams.comments, grams.type, grams.id]
+    `, [grams.photo, grams.location, grams.status, grams.comments, grams.type, id]
     );
 };
 
 Gram.delete = (id) => {
   return db.none(`
     DELETE FROM grams
-    WHERE grams.id = $1
+    WHERE id = $1
     `, [id]);
 }
 
