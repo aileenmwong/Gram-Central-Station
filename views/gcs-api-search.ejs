@@ -1,20 +1,19 @@
 <% include ./partials/boilerplate %>
 <% include ./partials/header %>
 <main>
-  <h1 id="searchHead">Search For Grams!</h1>
-  <div id="submitField">
-    <input name="food" id="foodSearch" type="text" placeholder="Type a food or place" />
-    <input name="location" id="locationSearch" type="text" placeholder="Location, i.e. Brooklyn, NY" />
-      <div id="buttonAPIwrap">
-        <button id="searchAPIbutton">SEARCH</button>
+  <div id="searchWrapper">
+    <div id="searchFieldWrapper">
+      <h1 id="searchHead">Search For Grams!</h1>
+      <div id="submitField">
+        <input name="food" class="searchFields" id="foodSearch" type="text" placeholder="Type a food or place" />
+        <input name="location" class="searchFields" id="locationSearch" type="text" placeholder="Location, i.e. Brooklyn, NY" />
       </div>
-  </div>
-  <div id="searchResults">
-    <div id="searchLocation"></div>
-    <div id="searchAddress"></div>
-    <div id="searchPhone"></div>
-    <div id="searchWebsite"></div>
-    <div id="searchType"></div>
+        <div id="buttonAPIwrap">
+          <button id="searchAPIbutton">SEARCH</button>
+        </div>
+      <div id="searchResults">
+      </div>
+    </div>
   </div>
 </main>
 <% include ./partials/end %>

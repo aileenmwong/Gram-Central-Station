@@ -68,6 +68,13 @@ img {
 #homeLogo {
   position: relative;
   margin: 50px;
+  width: 400px;
+  background-color: rgba(18,168,157,.5);
+}
+
+#indexPage {
+  background-image: url(../assets/photographers.jpg);
+  background-size: cover;
 }
 
 /*my feed main content*/
@@ -238,4 +245,54 @@ img {
   position: relative;
   margin-top: 10px;
 }
+
+/*API search Page*/
+
+#searchWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#searchFieldWrapper {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+#submitField {
+  display: flex;
+  flex-direction: column;
+}
+#buttonAPIwrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+#searchResults {
+  border: 1px solid black;
+}
+
+.resultCont {
+  border: 1px solid black;
+}
+
+.searchLocation {
+  border: 1px solid black;
+}
+
+.searchAddress {
+  border: 1px solid black;
+}
+
+.searchPhone {
+  border: 1px solid black;
+}
+.searchWebsite {
+  border: 1px solid black;
+}
+
 
