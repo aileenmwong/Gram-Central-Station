@@ -1,17 +1,19 @@
 <% include ./partials/boilerplate %>
 <% include ./partials/header %>
-<h1 id="searchHead">Search For Grams!</h1>
-  <form method='#' action='#'>
-    <select name="type" type="text">
-      <option value="1">treat</option>
-      <option value="2">meal</option>
-      <option value="3">location</option>
-      <option value="4">activity</option>
-    </select>
-    <input name="location" type="text" placeholder="location" />
-      <div id="buttonDiv">
-        <input class="saveButton" type="submit" value="search" />
+<main>
+  <h1 id="searchHead">Search For Grams!</h1>
+  <div id="submitField">
+    <input name="food" id="foodSearch" type="text" placeholder="Type a food or place" />
+    <input name="location" id="locationSearch" type="text" placeholder="Location, i.e. Brooklyn, NY" />
+      <div id="buttonAPIwrap">
+        <button id="searchAPIbutton">SEARCH</button>
       </div>
-    </form>
-  </main>
+  </div>
+  <div>
+    <div id="searchLocation"></div>
+    <div id="searchAddress"></div>
+    <div id="searchPhone"></div>
+    <div id="searchWebsite"></div>
+    <div id="searchType"></div>
+</main>
 <% include ./partials/end %>
