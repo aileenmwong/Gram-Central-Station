@@ -42,11 +42,30 @@ var type;
   // change the inner html of divs with appropriate data
   var manipulateDom = function(location, address, phone, website, type){
     // for (let i=0; i < data.response.venues.length; i++) {
-    $('#searchLocation').html(location)
-    $('#searchAddress').html(address)
-    $('#searchPhone').html(phone)
-    $('#searchWebsite').html(website)
-    $('#searchType').html(type)
+    let searchLocationDiv = $('<div>').attr('class', 'searchLocation');
+    let locationName = $('.searchLocation').html(location);
+    searchLocationDiv.append(locationName);
+    searchResults.append(searchLocationDiv);
+
+    let searchAddressDiv = $('<div>').attr('class', 'searchAddress');
+    let addressName = $('.searchAddress').html(address);
+    searchAddressDiv.append(addressName);
+    searchResults.append(searchAddressDiv);
+
+    let searchPhoneDiv = $('<div>').attr('class', 'searchPhone');
+    let phoneName = $('.searchPhone').html(phone);
+    searchPhoneDiv.append(phoneName);
+    searchResults.append(searchPhoneDiv);
+
+    let searchWebsiteDiv = $('<div>').attr('class', 'searchWebsite');
+    let websiteName = $('.searchWebsite').html(website);
+    searchWebsiteDiv.append(websiteName);
+    searchResults.append(searchWebsiteDiv);
+
+    let searchTypeDiv = $('<div>').attr('class', 'searchType')
+    let searchName = $('.searchType').html(type);
+    searchTypeDiv.append(searchName);
+    searchResults.append(searchTypeDiv);
     // }
     // locations.map(e => $('#searchLocation').append(e))
   }
