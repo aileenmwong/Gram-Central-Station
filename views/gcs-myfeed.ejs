@@ -19,13 +19,14 @@
             </form>
           </div>
           <div class="descriptionSmall" id="photoSmall"><img src="<%= grams.photo %>"></div>
-          <div class="descriptionSmall" id="locationSmall"><%= grams.location %></div>
+          <div class="descriptionSmall" id="locationSmall">&rtrif;    <%= grams.location %></div>
+          <div class="descriptionSmall" id="commentsSmall"><%= grams.comments %></div>
           <div class="descriptionSmall" id="statusSmall"><%= grams.status %></div>
           <div class="descriptionSmall" id="typeSmall"><% grams.type %></div>
         </div>
       <div class="buttonWrapper">
-        <a href="/grams/<%= grams.id %>"><button id="view">VIEW</button></a>
-        <a href="/grams/<%= grams.id %>/edit"><button id="edit">EDIT</button></a>
+        <a href="/grams/<%= grams.id %>"><button class="myFeedButtons" id="view">VIEW</button></a>
+        <a href="/grams/<%= grams.id %>/edit"><button class="myFeedButtons" id="edit">EDIT</button></a>
       </div>
       </div>
 

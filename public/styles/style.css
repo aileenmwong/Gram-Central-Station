@@ -3,7 +3,7 @@ font-family: 'Lobster', cursive;
 font-family: 'Fjalla One', sans-serif;
 */
 
-
+/*GENERAL STYLING*/
 
 button {
 /*  position: relative;*/
@@ -14,9 +14,14 @@ button {
 }
 
 img {
-  max-width: 200px;
-  max-height: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
+
+
+
 
 /*404 PAGE*/
 
@@ -74,7 +79,6 @@ img {
 /*  border: 1px solid black;*/
   margin-bottom: -80px;
   width: 400px;
-
 }
 
 #errorText {
@@ -82,6 +86,9 @@ img {
   font-size: 20px;
   width: 400px;
 }
+
+
+
 
 /*HEADER*/
 
@@ -101,7 +108,6 @@ img {
 /*  border: 1px solid black;*/
   justify-content: center;
   background-color: rgb(144,144,144);
-/*  position: relative;*/
   height: 50px;
 }
 
@@ -121,11 +127,9 @@ img {
   font-family: 'Quicksand', sans-serif;
   display: inline;
   background-color: rgb(88,193,185);
-  /*margin: 10px;*/
   padding: 5px 30px;
   align-items: center;
   justify-content: center;
-  /*border-radius: 5px;*/
   flex-direction: row;
   color: white;
 }
@@ -134,7 +138,9 @@ img {
   background-color: rgb(241,89,42);
 }
 
-/*home page main content*/
+
+
+/*HOME PAGE MAIN CONTENT*/
 .homeLogoWord {
   font-family: 'Lobster', cursive;
   font-size: 120px;
@@ -148,7 +154,6 @@ img {
   flex-direction: column;
 /*  border: 1px solid black;*/
   align-items: center;
-
 }
 
 #homeLogo {
@@ -177,7 +182,10 @@ img {
   color: white;
 }
 
-/*my feed main content*/
+
+
+/*MY FEED MAIN CONTENT*/
+
 #addNewWrapper {
   display: flex;
   flex-direction: row;
@@ -185,9 +193,11 @@ img {
   justify-content: center;
   margin: 20px;
 }
+
 #gramObjectSmall {
 /*  border: 1px solid gray;*/
   width: 230px;
+  height: 400px;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -201,6 +211,7 @@ img {
 #gramObjectSmall:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
 .feedWrapper {
   display: flex;
   flex-direction: row wrap;
@@ -213,8 +224,8 @@ img {
 /*  border: 1px solid black;*/
   width: 230px;
   position: relative;
-
 }
+
 #photoHeadSmallWrapper {
 /*  border: 1px solid black;*/
   display: flex;
@@ -225,24 +236,28 @@ img {
   background-color: rgba(18,168,157,.7);
   border-radius: 5px 5px 0 0;
 }
+
 #photoHeadSmall {
   height: 25px;
   position: relative;
-
 }
+
 #deleteX {
 /*  border: 1px solid black;*/
   position: relative;
-/*  background-color: lightblue;*/
   font-family: 'Quicksand', sans-serif;
   padding: 2px;
   height: 25px;
   width: 25px;
   margin-right: 4px;
-  background:none;
-  border:none;
-
+  background: none;
+  border: none;
 }
+
+#deleteX:hover {
+  color: white;
+}
+
 .descriptionSmall {
 /*  border: 1px solid black;*/
   width: 200px;
@@ -250,51 +265,70 @@ img {
   padding: 5px;
   position: relative;
   margin: auto;
-
 }
+
 #photoSmall {
   height: 200px;
   text-align: center;
   align-items: center;
+  vertical-align: middle;
   max-width: 200px;
   max-height: 200px;
-  border: 1px solid black;
+/*  border: 1px solid black;*/
 }
 
-#locationSmall{
+#locationSmall {
   font-family: 'Quicksand', sans-serif;
 /*  border: 1px solid black;*/
 }
+
 #statusSmall {
   font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
 /*  border: 1px solid black;*/
 }
-#typeSmall{
+
+#typeSmall {
   font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
 /*  border: 1px solid black;*/
 }
-#buttonWrapper {
+
+#commentsSmall {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+}
+
+.buttonWrapper {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  border: 1px solid black;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row;
+/*  border: 1px solid black;*/
+  position: relative;
 }
 
-#view {
+.myFeedButtons {
   border: 1px solid black;
   position: relative;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-#edit {
-  border: 1px solid black;
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 80px;
+  box-shadow: 3px 3px 2px -1px rgba(0,0,0,0.8);
 }
 
-/*add item page*/
+.myFeedButtons:hover {
+  background-color: rgb(241,89,42);
+}
+
+
+
+
+/*ADD ITEM PAGE*/
 
 #gramObjectLarge {
 /*  border: 1px solid black;*/
@@ -320,9 +354,8 @@ img {
 /*  border: 1px solid black;*/
   width: 350px;
   position: relative;
-
-
 }
+
 #photoHeadLargeWrapper {
 /*  border: 1px solid black;*/
   display: flex;
@@ -331,8 +364,8 @@ img {
   justify-content: space-between;
   background-color: rgba(18,168,157,.7);
   border-radius: 10px 10px 0 0;
-
 }
+
 #photoHeadLarge {
 /*  border: 1px solid black;*/
   height: 40px;
@@ -341,35 +374,46 @@ img {
 
 .descriptionLarge {
 /*  border: 1px solid black;*/
-  width: 350px;
+  width: 330px;
   font-family: 'Quicksand', sans-serif;
-  padding: 5px;
+  padding: 10px;
   position: relative;
 }
-#photoLarge {
-  height: 350px;
+
+.addItemInputs {
+  width: 320px;
+  height: 30px;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#typeLarge {
+  font-family: 'Quicksand', sans-serif;
+  width: 320px;
+  height: 30px;
+  font-size: 14px;
 /*  border: 1px solid black;*/
 }
 
-#locationLarge{
+.saveButton {
+  margin: 10px;
   font-family: 'Quicksand', sans-serif;
-/*  border: 1px solid black;*/
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
 }
-#statusLarge {
-  font-family: 'Quicksand', sans-serif;
-/*  border: 1px solid black;*/
-}
-#typeLarge{
-  font-family: 'Quicksand', sans-serif;
-/*  border: 1px solid black;*/
-}
+
 #view {
 /*  border: 1px solid black;*/
   position: relative;
   margin-top: 10px;
 }
 
-/*Edit Page*/
+
+
+
+/*EDIT PAGE*/
 
 .addForm {
   width: 330px;
@@ -390,7 +434,32 @@ img {
   width: 330px;
 }
 
-/*API search Page*/
+
+
+/*VIEW SINGLE PAGE*/
+#editSingle {
+  margin: 10px;
+  position: relative;
+}
+
+#buttonSingleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+/*  border: 1px solid black;*/
+  position: relative;
+}
+
+#deleteSingle {
+  position: relative;
+}
+
+
+
+
+/*API SEARCH PAGE*/
+
 #searchHead {
   font-family: 'Lobster', cursive;
   font-size: 80px;
@@ -421,6 +490,7 @@ img {
   display: flex;
   flex-direction: column;
 }
+
 #buttonAPIwrap {
   display: flex;
   align-items: center;
@@ -457,6 +527,7 @@ img {
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
   transform: scale(1.05, 1.05);
 }
+
 .searchLocation {
   font-family: 'Quicksand', sans-serif;
 /*  border: 1px solid black;*/
@@ -471,6 +542,7 @@ img {
   font-family: 'Quicksand', sans-serif;
 /*  border: 1px solid black;*/
 }
+
 .searchWebsite {
   font-family: 'Quicksand', sans-serif;
 /*  border: 1px solid black;*/

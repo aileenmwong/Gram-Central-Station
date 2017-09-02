@@ -7,26 +7,28 @@
       <div id="gramObjectLarge">
         <div id="gramWrapperLarge">
           <div id="photoHeadLargeWrapper">
-              <div id="photoHeadLarge">
-
-              </div>
-            </div>
-            <div class="descriptionSmall" id="photoLarge">
-              <img src="<%= grams.photo %>">
-            </div>
-            <div class="descriptionSmall" id="locationLarge">
-              <%=grams.location%>
-            </div>
-            <div class="descriptionSmall" id="statusLarge">
-              <%=grams.status%>
-            </div>
-            <div class="descriptionSmall" id="typeLarge">
-              <%=grams.type%>
+            <div id="photoHeadLarge"></div>
+          </div>
+          <div class="descriptionLarge" id="photoLarge">
+            <img src="<%= grams.photo %>">
+          </div>
+          <div class="descriptionLarge" id="locationLarge">
+            <%=grams.location%>
+          </div>
+          <div class="descriptionLarge" id="statusLarge">
+            <%=grams.status%>
+          </div>
+          <div class="descriptionLarge" id="typeLarge">
+            <%=grams.comments%>
           </div>
         </div>
       </div>
-      <a href="/grams/<%= grams.id %>/edit"><button id="edit">EDIT</button></a>
-    </div>
+      <div id="buttonSingleWrapper">
+        <a href="/grams/<%= grams.id %>/edit"><button id="editSingle">EDIT</button></a>
+        <form action="/grams/<%= grams.id %>?_method=Delete " method="Post">
+          <div><button id="deleteSingle">DELETE</button></div>
+        </form>
+      </div>
   </main>
 
 <% include ./partials/end %>

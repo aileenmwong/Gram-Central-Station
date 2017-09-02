@@ -11,16 +11,19 @@
               <div id="photoHeadLarge"></div>
             </div>
             <input name="id" type="hidden" value="<%= data.id %>">
-            <div class="descriptionSmall" id="photoLarge">
-              <input name="photo" class="addForm" type="text" placeholder="<%= data.photo %>" />
+            <div class="descriptionLarge" id="photoLarge">
+              <input class="addItemInputs" name="photo" class="addForm" type="text" value="<%= data.photo %>" />
             </div>
-            <div class="descriptionSmall" id="locationLarge">
-              <input name="location" class="addForm" type="text" placeholder="<%= data.location %>" />
+            <div class="descriptionLarge" id="locationLarge">
+              <input class="addItemInputs" name="location" class="addForm" type="text" value="<%= data.location %>" />
             </div>
-            <div class="descriptionSmall" id="statusLarge">
-              <input name="status" class="addForm" type="text" placeholder="<%= data.status %>" >
+            <div class="descriptionLarge" id="commentsLarge">
+              <input class="addItemInputs" id="addCommentsInput" name="comments" type="text" value="comments" >
             </div>
-            <div class="descriptionSmall" id="typeLarge">
+            <div class="descriptionLarge" id="statusLarge">
+              <input class="addItemInputs" name="status" class="addForm" type="text" value="<%= data.status %>" >
+            </div>
+            <div class="descriptionLarge" id="typeLarge">
               <select name="type" id="editDrop" type="text">
                 <option value="1">treat</option>
                 <option value="2">meal</option>
