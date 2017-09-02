@@ -57,6 +57,7 @@ counter = 0;
     let websiteItem = $('<li>').attr('class', 'searchWebsite').html(website);
     websiteItem.appendTo($container);
 
+
     // for (let i=0; i < data.response.venues.length; i++) {
 
     // let searchLocationDiv = $('<li>').attr('class', 'searchLocation');
@@ -80,6 +81,7 @@ counter = 0;
     // $container.append(searchWebsiteDiv);
 
     $('#searchResults').append($container)
+
 
     // let searchTypeDiv = $('<div>').attr('class', 'searchType')
     // let searchName = $('.searchType').html(type);

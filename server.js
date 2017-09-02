@@ -17,12 +17,16 @@ app.get('/', function(req, res){
   res.render('gcs-index')
 });
 
+app.get('/404', (req, res) => {
+  res.render('gcs-404')
+});
+
 app.get('/search', function(req, res){
   res.render('gcs-api-search')
 });
 
 app.get('/gramfeed', function(req, res){
-  res.render('gcs-api-feed')
+  res.render('gcs-404')
 });
 
 const gramRoutes = require('./routes/gram-routes');

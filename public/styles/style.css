@@ -2,11 +2,15 @@
 font-family: 'Lobster', cursive;
 font-family: 'Fjalla One', sans-serif;
 */
+
+
+
 button {
 /*  position: relative;*/
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  padding: 10px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 img {
@@ -14,15 +18,91 @@ img {
   max-height: 200px;
 }
 
-/*header*/
+/*404 PAGE*/
+
+#errorWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#wallabyWrapper {
+  display: flex;
+/*  border: 1px solid black;*/
+  width: 800px;
+  height: 600px;
+}
+
+#wallaby {
+  background-image: url(../assets/wallaby.png);
+  height: 600px;
+  width: 400px;
+/*  border: 1px solid black;*/
+  background-repeat: no-repeat;
+}
+
+#flash {
+  background: lightyellow;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  margin-top: 329px;
+  margin-left: 83px;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0%, 100% {opacity: 0;}
+  50% {opacity: 1;}
+}
+
+#errorTextWrapper {
+  display: flex;
+  flex-direction: column;
+/*  border: 1px solid black;*/
+  width: 400px;
+  margin: 30px;
+}
+
+#errorHeader {
+  font-family: 'Lobster', cursive;
+  font-size: 70px;
+/*  border: 1px solid black;*/
+  margin-bottom: -80px;
+  width: 400px;
+
+}
+
+#errorText {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 400px;
+}
+
+/*HEADER*/
+
+#logoHeaderWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#logoHeader {
+  font-family: 'Lobster', cursive;
+}
 
 #navBarWrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid black;
+/*  border: 1px solid black;*/
   justify-content: center;
+  background-color: rgb(144,144,144);
 /*  position: relative;*/
+  height: 50px;
 }
 
 #navBar {
@@ -32,21 +112,26 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .navLinks {
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
   display: inline;
-  background-color: lightyellow;
-  margin: 10px;
-  padding: 10px 30px;
+  background-color: rgb(88,193,185);
+  /*margin: 10px;*/
+  padding: 5px 30px;
   align-items: center;
   justify-content: center;
+  /*border-radius: 5px;*/
+  flex-direction: row;
+  color: white;
 }
 
 .navLinks:hover {
-  color: hotpink;
+  background-color: rgb(241,89,42);
 }
 
 /*home page main content*/
@@ -63,6 +148,7 @@ img {
   flex-direction: column;
 /*  border: 1px solid black;*/
   align-items: center;
+
 }
 
 #homeLogo {
@@ -70,11 +156,25 @@ img {
   margin: 50px;
   width: 400px;
   background-color: rgba(18,168,157,.5);
+  border-radius: 25px;
 }
 
 #indexPage {
-  background-image: url(../assets/photographers.jpg);
+  background-image: url(../assets/photographers.png);
   background-size: cover;
+}
+
+#startButtonWrapper {
+  height: 100px;
+}
+
+#startButton {
+  margin-bottom: 100px;
+  background-color: rgb(18,168,157);
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
 }
 
 /*my feed main content*/
@@ -86,12 +186,20 @@ img {
   margin: 20px;
 }
 #gramObjectSmall {
-  border: 1px solid gray;
-  width: 200px;
+/*  border: 1px solid gray;*/
+  width: 230px;
   display: flex;
   position: relative;
   flex-direction: column;
   margin: 10px 0;
+  border-radius: 5px;
+  background-color: rgb(252,252,252);
+  box-shadow: 3px 3px 4px -2px rgba(0,0,0,0.19);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#gramObjectSmall:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .feedWrapper {
   display: flex;
@@ -103,7 +211,7 @@ img {
 
 #gramWrapperSmall {
 /*  border: 1px solid black;*/
-  width: 200px;
+  width: 230px;
   position: relative;
 
 }
@@ -111,10 +219,11 @@ img {
 /*  border: 1px solid black;*/
   display: flex;
   position: relative;
-  width: 200px;
+  width: 230px;
+  height: 28px;
   justify-content: space-between;
-  background-color: lightblue;
-
+  background-color: rgba(18,168,157,.7);
+  border-radius: 5px 5px 0 0;
 }
 #photoHeadSmall {
   height: 25px;
@@ -124,11 +233,14 @@ img {
 #deleteX {
 /*  border: 1px solid black;*/
   position: relative;
-  background-color: lightblue;
+/*  background-color: lightblue;*/
   font-family: 'Quicksand', sans-serif;
   padding: 2px;
   height: 25px;
   width: 25px;
+  margin-right: 4px;
+  background:none;
+  border:none;
 
 }
 .descriptionSmall {
@@ -138,10 +250,15 @@ img {
   padding: 5px;
   position: relative;
   margin: auto;
+
 }
 #photoSmall {
   height: 200px;
-/*  border: 1px solid black;*/
+  text-align: center;
+  align-items: center;
+  max-width: 200px;
+  max-height: 200px;
+  border: 1px solid black;
 }
 
 #locationSmall{
@@ -180,11 +297,14 @@ img {
 /*add item page*/
 
 #gramObjectLarge {
-  border: 1px solid black;
+/*  border: 1px solid black;*/
   width: 350px;
   display: flex;
   position: relative;
   flex-direction: column;
+  border-radius: 10px;
+  background-color: rgb(252,252,252);
+  box-shadow: 6px 6px 4px -2px rgba(0,0,0,0.19);
 }
 
 .largeWrapper {
@@ -201,6 +321,7 @@ img {
   width: 350px;
   position: relative;
 
+
 }
 #photoHeadLargeWrapper {
 /*  border: 1px solid black;*/
@@ -208,10 +329,12 @@ img {
   position: relative;
   width: 350px;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: rgba(18,168,157,.7);
+  border-radius: 10px 10px 0 0;
 
 }
 #photoHeadLarge {
+/*  border: 1px solid black;*/
   height: 40px;
   position: relative;
 }
@@ -241,12 +364,38 @@ img {
 /*  border: 1px solid black;*/
 }
 #view {
-  border: 1px solid black;
+/*  border: 1px solid black;*/
   position: relative;
   margin-top: 10px;
 }
 
+/*Edit Page*/
+
+.addForm {
+  width: 330px;
+  margin: 5px;
+  height: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+}
+
+#typeLarge {
+  display: flex;
+  height: 20px;
+}
+
+#editDrop {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  width: 330px;
+}
+
 /*API search Page*/
+#searchHead {
+  font-family: 'Lobster', cursive;
+  font-size: 80px;
+  text-align: center;
+}
 
 #searchWrapper {
   display: flex;
@@ -261,6 +410,13 @@ img {
   justify-content: center;
 }
 
+.searchFields {
+  height: 30px;
+  margin: 2px;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+}
+
 #submitField {
   display: flex;
   flex-direction: column;
@@ -273,26 +429,52 @@ img {
 }
 
 #searchResults {
-  border: 1px solid black;
+/*  border: 1px solid black;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .resultCont {
-  border: 1px solid black;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  list-style: none;
+  border: 1%;
+  border-radius: 5px;
+  background-color: rgb(252,252,252);
+  width: 70%;
+  height: 70%;
+  flex: 1;
+  padding-right: 30px;
+  box-shadow: 3px 3px 4px -2px rgba(0,0,0,0.19);
+  transition: box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
+.resultCont:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  transform: scale(1.05, 1.05);
+}
 .searchLocation {
-  border: 1px solid black;
+  font-family: 'Quicksand', sans-serif;
+/*  border: 1px solid black;*/
 }
 
 .searchAddress {
-  border: 1px solid black;
+  font-family: 'Quicksand', sans-serif;
+/*  border: 1px solid black;*/
 }
 
 .searchPhone {
-  border: 1px solid black;
+  font-family: 'Quicksand', sans-serif;
+/*  border: 1px solid black;*/
 }
 .searchWebsite {
-  border: 1px solid black;
+  font-family: 'Quicksand', sans-serif;
+/*  border: 1px solid black;*/
 }
+
 
 
