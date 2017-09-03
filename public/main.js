@@ -40,7 +40,7 @@ counter = 0;
   }
 
   // change the inner html of divs with appropriate data
-  var manipulateDom = function(location, address, phone, website, type){
+  var manipulateDom = function(location, address, phone, website, type) {
     console.log('manipulating the dom',location,address[0],phone,website);
 
     let $container = $('<ul>').attr('class', 'resultCont');
@@ -55,8 +55,10 @@ counter = 0;
     phoneItem.appendTo($container);
 
     let websiteItem = $('<li>').attr('class', 'searchWebsite').html(website);
-    websiteItem.appendTo($container);
-
+    let websiteButton = $('<button>').attr('class', 'websiteButton').html('Go To Website');
+    $container.append(websiteItem);
+    $container.append(websiteButton);
+    websiteButton.wrap('<a href="'+ website +'"></a>')
 
     // for (let i=0; i < data.response.venues.length; i++) {
 
@@ -79,8 +81,8 @@ counter = 0;
     // let websiteName = $('.searchWebsite').html(website);
     // searchWebsiteDiv.append(websiteName);
     // $container.append(searchWebsiteDiv);
-
     $('#searchResults').append($container)
+
 
 
     // let searchTypeDiv = $('<div>').attr('class', 'searchType')

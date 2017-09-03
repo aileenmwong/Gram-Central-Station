@@ -22,7 +22,6 @@ img {
 
 
 
-
 /*404 PAGE*/
 
 #errorWrapper {
@@ -546,6 +545,10 @@ img {
 .searchWebsite {
   font-family: 'Quicksand', sans-serif;
 /*  border: 1px solid black;*/
+}
+
+.websiteButton {
+  margin: 5px;
 }
 
 

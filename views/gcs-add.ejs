@@ -1,47 +1,46 @@
 <% include ./partials/boilerplate %>
 <% include ./partials/header %>
 <% include ./partials/nav-bar %>
-  <main>
+
+<main>
   <form method='POST' action='/grams'>
     <div class="largeWrapper">
       <div id="gramObjectLarge">
         <div id="gramWrapperLarge">
           <div id="photoHeadLargeWrapper">
-              <div id="photoHeadLarge">
-
-              </div>
-            </div>
-            <div class="descriptionLarge" id="photoLarge">
-              <input class="addItemInputs" id="addPhotoInput" name="photo" type="text" placeholder="Place URL here" />
-              <p>Please make sure URL has a photo tag at the end of the link, such as .jpg, .png. or .gif</p>
-            </div>
-            <div class="descriptionLarge" id="locationLarge">
-              <input class="addItemInputs" id="addLocationInput" name="location" type="text" placeholder="location" />
-            </div>
-            <div class="descriptionLarge" id="commentsLarge">
-              <input class="addItemInputs" id="addCommentsInput" name="comments" type="text" placeholder="comments" >
-            </div>
-            <div class="descriptionLarge" id="statusLarge">
-              <input class="addItemInputs" id="addStatusInput" name="status" type="text" placeholder="status" >
-            </div>
-            <div class="descriptionLarge">
-              <select name="type" type="text" id="typeLarge">
-                <option value="1">treat</option>
-                <option value="2">meal</option>
-                <option value="3">location</option>
-                <option value="4">activity</option>
-              </select>
+            <div id="photoHeadLarge"></div>
+          </div>
+          <div class="descriptionLarge" id="photoLarge">
+            <input class="addItemInputs" id="addPhotoInput" name="photo" type="text" placeholder="Place URL here" />
+            <p>Please make sure URL has a photo tag at the end of the link, such as .jpg, .png. or .gif</p>
+          </div>
+          <div class="descriptionLarge" id="locationLarge">
+            <input class="addItemInputs" id="addLocationInput" name="location" type="text" placeholder="location" />
+          </div>
+          <div class="descriptionLarge" id="commentsLarge">
+            <input class="addItemInputs" id="addCommentsInput" name="comments" type="text" placeholder="comments" >
+          </div>
+          <div class="descriptionLarge" id="statusLarge">
+            <input class="addItemInputs" id="addStatusInput" name="status" type="text" placeholder="status" >
+          </div>
+          <div class="descriptionLarge">
+            <select name="type" type="text" id="typeLarge">
+              <option value="1">treat</option>
+              <option value="2">meal</option>
+              <option value="3">location</option>
+              <option value="4">activity</option>
+            </select>
           </div>
         </div>
       </div>
       <div id="buttonDiv">
-          <input class="saveButton" type="submit" value="save" />
+        <input class="saveButton" type="submit" value="save" />
       </div>
     </div>
-  </main>
+  </form>
+</main>
+
 <% include ./partials/end %>
-
-
 
 
 

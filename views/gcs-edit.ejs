@@ -1,35 +1,35 @@
-
 <% include ./partials/boilerplate %>
 <% include ./partials/header %>
 <% include ./partials/nav-bar %>
-  <main>
+
+<main>
   <form method='POST' action='/grams/<%= data.id %>?_method=PUT'>
     <div class="largeWrapper">
       <div id="gramObjectLarge">
         <div id="gramWrapperLarge">
           <div id="photoHeadLargeWrapper">
-              <div id="photoHeadLarge"></div>
-            </div>
-            <input name="id" type="hidden" value="<%= data.id %>">
-            <div class="descriptionLarge" id="photoLarge">
-              <input class="addItemInputs" name="photo" class="addForm" type="text" value="<%= data.photo %>" />
-            </div>
-            <div class="descriptionLarge" id="locationLarge">
-              <input class="addItemInputs" name="location" class="addForm" type="text" value="<%= data.location %>" />
-            </div>
-            <div class="descriptionLarge" id="commentsLarge">
-              <input class="addItemInputs" id="addCommentsInput" name="comments" type="text" value="comments" >
-            </div>
-            <div class="descriptionLarge" id="statusLarge">
-              <input class="addItemInputs" name="status" class="addForm" type="text" value="<%= data.status %>" >
-            </div>
-            <div class="descriptionLarge" id="typeLarge">
-              <select name="type" id="editDrop" type="text">
-                <option value="1">treat</option>
-                <option value="2">meal</option>
-                <option value="3">location</option>
-                <option value="4">activity</option>
-              </select>
+            <div id="photoHeadLarge"></div>
+          </div>
+          <input name="id" type="hidden" value="<%= data.id %>">
+          <div class="descriptionLarge" id="photoLarge">
+            <input class="addItemInputs" name="photo" class="addForm" type="text" value="<%= data.photo %>" />
+          </div>
+          <div class="descriptionLarge" id="locationLarge">
+            <input class="addItemInputs" name="location" class="addForm" type="text" value="<%= data.location %>" />
+          </div>
+          <div class="descriptionLarge" id="commentsLarge">
+            <input class="addItemInputs" id="addCommentsInput" name="comments" type="text" value="comments" >
+          </div>
+          <div class="descriptionLarge" id="statusLarge">
+            <input class="addItemInputs" name="status" class="addForm" type="text" value="<%= data.status %>" >
+          </div>
+          <div class="descriptionLarge" id="typeLarge">
+            <select name="type" id="editDrop" type="text">
+              <option value="1">treat</option>
+              <option value="2">meal</option>
+              <option value="3">location</option>
+              <option value="4">activity</option>
+            </select>
           </div>
         </div>
       </div>
@@ -37,8 +37,7 @@
           <input class="saveButton" type="submit" value="save" />
       </div>
     </div>
-    </form>
-  </main>
+  </form>
+</main>
+
 <% include ./partials/end %>
-
-

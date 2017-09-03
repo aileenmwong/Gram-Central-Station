@@ -2,33 +2,36 @@
 <% include ./partials/header %>
 <% include ./partials/nav-bar %>
 
-  <main>
-    <div class="largeWrapper">
-      <div id="gramObjectLarge">
-        <div id="gramWrapperLarge">
-          <div id="photoHeadLargeWrapper">
-            <div id="photoHeadLarge"></div>
-          </div>
-          <div class="descriptionLarge" id="photoLarge">
-            <img src="<%= grams.photo %>">
-          </div>
-          <div class="descriptionLarge" id="locationLarge">
-            <%=grams.location%>
-          </div>
-          <div class="descriptionLarge" id="statusLarge">
-            <%=grams.status%>
-          </div>
-          <div class="descriptionLarge" id="typeLarge">
-            <%=grams.comments%>
-          </div>
+<main>
+  <div class="largeWrapper">
+    <div id="gramObjectLarge">
+      <div id="gramWrapperLarge">
+        <div id="photoHeadLargeWrapper">
+          <div id="photoHeadLarge"></div>
+        </div>
+        <div class="descriptionLarge" id="photoLarge">
+          <img src="<%= grams.photo %>">
+        </div>
+        <div class="descriptionLarge" id="locationLarge">
+          <%=grams.location%>
+        </div>
+        <div class="descriptionLarge" id="statusLarge">
+          <%=grams.status%>
+        </div>
+        <div class="descriptionLarge" id="typeLarge">
+          <%=grams.comments%>
         </div>
       </div>
-      <div id="buttonSingleWrapper">
-        <a href="/grams/<%= grams.id %>/edit"><button id="editSingle">EDIT</button></a>
-        <form action="/grams/<%= grams.id %>?_method=Delete " method="Post">
-          <div><button id="deleteSingle">DELETE</button></div>
-        </form>
-      </div>
-  </main>
+    </div>
+    <div id="buttonSingleWrapper">
+      <a href="/grams/<%= grams.id %>/edit">
+        <button id="editSingle">EDIT</button>
+      </a>
+      <form action="/grams/<%= grams.id %>?_method=Delete " method="Post">
+        <div><button id="deleteSingle">DELETE</button></div>
+      </form>
+    </div>
+  </div>
+</main>
 
 <% include ./partials/end %>
