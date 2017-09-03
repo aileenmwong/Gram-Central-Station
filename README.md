@@ -1,4 +1,4 @@
-![Gram Central Station My Feed]('/readme-assets/GCS-feed-page.png')
+![Gram Central Station My Feed](/readme-assets/GCS-feed-page.png "Gram Central Station My Feed")
 
 # Gram Central Station ###
 
