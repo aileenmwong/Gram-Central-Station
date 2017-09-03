@@ -2,6 +2,7 @@
 $(document).ready(function() {
 console.log('main.js is connected!');
 
+// set variables so they can change dynamically as information comes in from the api
 let location;
 let address;
 let phone;
@@ -21,15 +22,12 @@ counter = 0;
         console.log('the data stuff ->>', data);
         // debugger
         for (let i=0; i < data.response.venues.length; i++) {
-        // let locations = data.response.venues.map (e => e.name)
-        // let websites = data.response.venues.map (e => e.url)
-        // let types = data.response.venues.map (e => e.categories)
+
         location = data.response.venues[i].name;
         address = data.response.venues[i].location.formattedAddress;
         phone = data.response.venues[i].contact.formattedPhone;
         website = data.response.venues[i].url;
-        // type = data.response.venues[i].categories[i].name;
-        // console.log(locations, websites, types);
+
         manipulateDom(location,address,phone,website);
       }
       })
@@ -39,7 +37,7 @@ counter = 0;
       counter ++;
   }
 
-  // change the inner html of divs with appropriate data
+  // change the inner html of lis with appropriate data
   var manipulateDom = function(location, address, phone, website, type) {
     console.log('manipulating the dom',location,address[0],phone,website);
 
@@ -60,46 +58,8 @@ counter = 0;
     $container.append(websiteButton);
     websiteButton.wrap('<a href="'+ website +'"></a>')
 
-    // for (let i=0; i < data.response.venues.length; i++) {
-
-    // let searchLocationDiv = $('<li>').attr('class', 'searchLocation');
-    // let locationName = $('.searchLocation').html(location);
-    // searchLocationDiv.append(locationName);
-    // $container.append(searchLocationDiv);
-
-    // let searchAddressDiv = $('<li>').attr('class', 'searchAddress');
-    // let addressName = $('.searchAddress').html(address);
-    // searchAddressDiv.append(addressName);
-    // $container.append(searchAddressDiv);
-
-    // let searchPhoneDiv = $('<li>').attr('class', 'searchPhone');
-    // let phoneName = $('.searchPhone').html(phone);
-    // searchPhoneDiv.append(phoneName);
-    // $container.append(searchPhoneDiv);
-
-    // let searchWebsiteDiv = $('<li>').attr('class', 'searchWebsite');
-    // let websiteName = $('.searchWebsite').html(website);
-    // searchWebsiteDiv.append(websiteName);
-    // $container.append(searchWebsiteDiv);
     $('#searchResults').append($container)
 
-
-
-    // let searchTypeDiv = $('<div>').attr('class', 'searchType')
-    // let searchName = $('.searchType').html(type);
-    // searchTypeDiv.append(searchName);
-    // searchResults.append(searchTypeDiv);
-
-    // $('#searchLocation').html(location);
-    // $('#searchAddress').html(address);
-    // $('#searchPhone').html(phone);
-    // $('#searchWebsite').html(website);
-    // $('#searchType').html(type);
-
-    // let photosButton = $('<button>').attr('id','getPhotos');
-    // let photosButtonName = $(#getPhotos).html('Get Photos');
-    // }
-    // locations.map(e => $('#searchLocation').append(e))
   }
 
   let submitButton = document.querySelector('#searchAPIbutton');
