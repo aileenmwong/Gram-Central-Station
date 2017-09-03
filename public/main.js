@@ -15,7 +15,7 @@ counter = 0;
     // the callApi function makes the ajax call to get the data
     let food = $('#foodSearch').val();
     let locationSearch = $('#locationSearch').val();
-    let url = `https://api.foursquare.com/v2/venues/search?near=${locationSearch}+&query=${food}+&limit=10&client_id=RL55VEBRRIQBNSGEA0EJ3YCZFFQRXNN3FEI2V1MWN4SZY2CS&client_secret=LSUPFZ5NNJ402S0IC55B5OVIIEMMKZ24WKY1B1ZVIIGPPZLS&v=20170831`
+    let url = `https://api.foursquare.com/v2/venues/search?near=${locationSearch}+&query=${food}+&limit=10&client_id=ENV['SUPER_SECRET_CLIENT_ID']&client_secret=ENV['SUPER_SECRET_CLIENT_SECRET']&v=20170831`
     $.getJSON(url)
       .done(function(data) {
         console.log('the data stuff ->>', data);
