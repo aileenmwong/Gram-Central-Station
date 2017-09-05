@@ -1,7 +1,10 @@
+//require the configuration
 const db = require('../db/config');
 
+//create an empty object to push the function that the model is using into
 const Gram = {};
 
+//this is the function selects all of the data from the database
 Gram.findAll = () => {
   return db.query(`
     SELECT grams.id, photo, location, status, comments, type
@@ -10,6 +13,7 @@ Gram.findAll = () => {
     `);
 };
 
+//this is the function selects a single item from the database
 Gram.findById = (id) => {
   console.log('helllo',id);
   return db.oneOrNone(`
@@ -20,6 +24,7 @@ Gram.findById = (id) => {
     `, [id]);
 };
 
+//this is the function inserts a single item into the database
 Gram.create = grams => {
   grams.type = Number.parseInt(grams.type, 10)
   console.log(grams.type);
@@ -34,6 +39,7 @@ Gram.create = grams => {
     );
 };
 
+//this is the function updates a single item in the database
 Gram.update = (grams, id) => {
   grams.type = Number.parseInt(grams.type, 10)
   console.log(grams, id);
@@ -51,6 +57,7 @@ Gram.update = (grams, id) => {
     );
 };
 
+//this is the function deletes a single item in the database
 Gram.delete = (id) => {
   return db.none(`
     DELETE FROM grams
@@ -58,5 +65,5 @@ Gram.delete = (id) => {
     `, [id]);
 }
 
-
+//export the model
 module.exports = Gram;
