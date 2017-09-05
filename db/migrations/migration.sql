@@ -1,4 +1,4 @@
-\connect grams_db_dev
+
 
 CREATE TABLE IF NOT EXISTS phototypes (
   id BIGSERIAL PRIMARY KEY,
