@@ -4,6 +4,8 @@ require('dotenv').config();
 const express = require('express');
 // declare app as express
 const app = express();
+const logger = require('morgan');
+app.use(logger('dev'));
 
 //MIDDLEWARE
 //require bodyParser
@@ -28,9 +30,9 @@ app.get('/gramfeed', (req, res) => {
   res.render('gcs-404')
 });
 
-// app.get('/search', function(req, res){
-//   res.render('gcs-api-search')
-// });
+app.get('/search', function(req, res){
+  res.render('gcs-api-search')
+});
 
 // const clientID = process.env.SUPER_SECRET_CLIENT_ID;
 // const clientSecret = process.env.SUPER_SECRET_CLIENT_SECRET;
@@ -51,6 +53,9 @@ app.get('/gramfeed', (req, res) => {
 //require the router
 const gramRoutes = require('./routes/gram-routes');
 app.use('/grams', gramRoutes);
+
+const apiRoutes = require('./routes/api-routes')
+app.use('/apiroute', apiRoutes);
 
 //set the views so ejs can be rendered
 app.set('views', path.join(__dirname, 'views'));

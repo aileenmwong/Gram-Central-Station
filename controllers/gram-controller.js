@@ -84,10 +84,6 @@ gramController.search = (req, res) => {
   Gram.search
     .then(grams => {
     res.render('./gcs-api-search', {
-    location: res.locals.location,
-    address: res.locals.address,
-    phone: res.locals.phone,
-    website: res.locals.website,
   })
   .catch(err => {
     res.status(500).json(err);
