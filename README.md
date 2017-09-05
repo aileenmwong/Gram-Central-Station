@@ -90,6 +90,9 @@ I spend the entire day styling, which was totally my jam. I was able to spend a 
 ### DAY 6 (Sun) ###
 My goal was to finish my project by Sunday night so I could have one day of relaxation on Labor Day. I spent the day fiddling with a few adjustments including adding a few additional features, like linking the search results to the original source websites and trying to figure out how to hide my API keys. 
 
+### DAY 7 (Mon) ###
+I worked on hiding keys more, but was still unable to figure it out by myself, so I was not able to deploy the site on heroku. I'll work on this and get it up and running by Wednesday. 
+
 ## Future Improvements ###
 I would like to use a different API where I can source pictures as well as search what's trending and do a general search in a specific location. Unfortunately I realized when I was already deep into the path of the Foursquare API that I would have to do two separate calls to do that, and it was more complicated than I could handle. 
 
@@ -101,3 +104,7 @@ Post post post MVP, I would love for users to be able to collaborate on feeds, s
 
 ### Issues to solve ###
 The pictures render slowly when they are large files, so I would love to be able to get a cloud based API working, however, I was able to scale down my photos that I have in my database so they load quickly. 
+
+I also was unable to hide my keys sever side, so I was unable to deploy, but I will work on the solution with the TAs Tuesday night and have everything wrapped up on Wednesday. 
+
+I would also like to figure out how to get my add new function to add the newest item to the top of the page. Sometimes it adds it in the middle of the page, sometimes it adds it at the top, and I'm unsure why it adds them arbitrarily.

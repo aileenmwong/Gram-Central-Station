@@ -9,15 +9,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
-// app.get('/', (req, res) => {
-//   res.send('<h1>Gram Central Station</h1>');
-// });
-
 app.get('/', function(req, res){
   res.render('gcs-index')
 });
 
-app.get('/404', (req, res) => {
+app.get('/gramfeed', (req, res) => {
   res.render('gcs-404')
 });
 
@@ -25,9 +21,21 @@ app.get('/search', function(req, res){
   res.render('gcs-api-search')
 });
 
-app.get('/gramfeed', function(req, res){
-  res.render('gcs-404')
-});
+// const clientID = process.env.SUPER_SECRET_CLIENT_ID;
+// const clientSecret = process.env.SUPER_SECRET_CLIENT_SECRET;
+// app.get('/search', function(req, res) {
+//   request("https://api.foursquare.com/v2/venues/search?near="+near+"&query="+query+"+&limit=10&client_id={clientID}&client_secret={clientSecret}&v=20170831")
+//   .then((response) => {
+//     response = JSON.parse(response);
+//     res.render ('gcs-api-search', {
+//         location: data.response.venues.name,
+//         address: data.response.venues.location.formattedAddress,
+//         phone: data.response.venues.contact.formattedPhone,
+//         website: data.response.venues.url,
+//     })
+//   })
+//   .catch(err => res.json(err));
+// });
 
 const gramRoutes = require('./routes/gram-routes');
 app.use('/grams', gramRoutes);
@@ -37,8 +45,11 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.static(__dirname + "/public"));
 
+
 //assign port
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port,() => {
   console.log(`listening on port ${port}`);
 })
+
+

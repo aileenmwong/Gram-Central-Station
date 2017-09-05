@@ -1,10 +1,13 @@
 const gramController = require('../controllers/gram-controller');
 const express = require('express');
 const gramRoutes = express.Router();
+const gramsHelpers = require('../services/grams/gramsHelpers');
 
 gramRoutes.get('/add', (req, res) => {
   res.render('gcs-add');
 });
+
+gramRoutes.get('/search', gramsHelpers.getSearchResults, gramController.search);
 
 gramRoutes.get('/:id', gramController.show);
 gramRoutes.delete('/:id', gramController.delete);
