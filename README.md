@@ -6,7 +6,7 @@ Gram Central Station is the place where Instagram lovers can save their future g
 
 As a heavy social media user, my friends and I are often sending each other photos of things or places we want to go to. The problem is that when we actually have time to go to them, we forget and always go back to our old haunts. We've started to share cloud based docs that we add to every time we find something new, but ultimately the doc gets forgotten and it's too late because the exhibit has closed or the store is sold out -- and that's where Gram Central Station comes in!
 
-[Go to Gram Central Station](#)
+[Go to Gram Central Station](https://blooming-gorge-62801.herokuapp.com/)
 
 ## Technologies Used ###
 
