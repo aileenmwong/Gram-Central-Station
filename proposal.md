@@ -11,25 +11,25 @@ Unfortunately the market is saturated with rainbow bagels, so Gram Central Stati
 ### Wireframes ###
 
 #### Home Page ###
-![Home page](assets/index.png)
+![Home page](assets-proposal/index.png)
 
 #### My Feed ###
-![My feed](assets/my-feed.png)
+![My feed](assets-proposal/my-feed.png)
 
 #### Single Item ###
-![Single Item](assets/single.png)
+![Single Item](assets-proposal/single.png)
 
 #### Add New ###
-![Add New](assets/add-new.png)
+![Add New](assets-proposal/add-new.png)
 
 #### Edit Item ###
-![Edit Item](assets/edit-item.png)
+![Edit Item](assets-proposal/edit-item.png)
 
 #### Search Page ###
-![Search Page](assets/search-page.png)
+![Search Page](assets-proposal/search-page.png)
 
 #### Search Feed ###
-![Search Feed](assets/search-feed.png)
+![Search Feed](assets-proposal/search-feed.png)
 
 ### Initial thoughts on structure ###
 
@@ -38,7 +38,7 @@ Unfortunately the market is saturated with rainbow bagels, so Gram Central Stati
 I will need to carefully think about how I'm going to bring images into my feed. I'll source my own instagram for a lot of fun looking treats to seed the database. However, I'll need to figure out how to use an image in a database. My app is photo heavy so the images are important.
 
 #### Database Example ###
-![Databases](assets/tables.png)
+![Databases](assets-proposal/tables.png)
 
 Post MVP
 I want to use the [Foursquare API](https://developer.foursquare.com/) to be able to generate images and location information. I want the user to be able to put in a zip code or a hashtag to search by hashtag through their API. Upon searching, the app will generate a few images for the user to look through and save any potential food/locations that seem interesting to them.
